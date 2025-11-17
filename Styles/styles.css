@@ -1,0 +1,30 @@
+@keyframes onda {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    70% {
+        transform: scale(2.4);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.onda1, .onda2 {
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background: rgba(37, 211, 102, 0.6); /* verde whatsapp */
+    animation: onda 2s infinite ease-out;
+}
+
+.onda2 {
+    animation-delay: 1s;
+}
+
+.icon-wrapper {
+    border: none;
+    background: none;
+}
