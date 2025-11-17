@@ -1,79 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
-        rel="stylesheet" 
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
-        crossorigin="anonymous">
-
-    <link rel="stylesheet" href="Style/Style.css">
-    
     <title>ExpediciónCr</title>
 
     <link rel="icon" type="image/jpg" href="Images/Simbolo.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
+<body class="bg-white min-h-screen flex flex-col">
 
-<body style="background-image: url('Images/Imagen fondo 3.jpg')">
+    <header class="py-4 px-4" style="background-color: #f6efe9;">
+        <div class="max-w-full flex justify-between items-center">
 
-    <header>
-        <div class="container py-3"> 
+            <!-- Logo -->
             <img 
-                src="Images/LogoFondo.jpg" 
+                src="Images/Logo Empresa.png" 
                 alt="Logo Secundario" 
-                class="img-simbolo" 
-                style="max-height: 100px;"> 
-            
-            <img 
-                src="Images/Logo.jpg" 
-                alt="Logo de la Empresa" 
-                class="img-logo" 
-                style="max-height: 100px;">
+                class="h-12">
+
+            <!-- Botón hamburguesa (solo visible en móviles) -->
+            <label for="menu-toggle" class="cursor-pointer md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                     class="h-8 w-8" fill="none" 
+                     viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" 
+                          stroke-linejoin="round" 
+                          stroke-width="2" 
+                          d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </label>
+
+            <!-- Checkbox oculto que controla el menú -->
+            <input type="checkbox" id="menu-toggle" class="peer hidden">
+
+            <!-- Navegación -->
+            <nav class="hidden peer-checked:flex absolute top-16 left-0 w-full 
+                        bg-neutral-100 flex-col md:static md:flex md:flex-row md:bg-transparent md:w-auto">
+
+                <a href="Pages/Inicio.html" class="px-4 py-2 hover:scale-105 md:hover:bg-transparent" target="contenido">Inicio</a>
+                <a href="Pages/Eventos.html" class="px-4 py-2 hover:scale-105 md:hover:bg-transparent" target="contenido">Eventos</a>
+                <a href="Pages/Ofertas.html" class="px-4 py-2 hover:scale-105 md:hover:bg-transparent" target="contenido">Ofertas</a>
+
+            </nav>
+
         </div>
     </header>
 
-    <main style="flex: 1;">
-        <nav class="navegador">
-            <a href="pages/nosotros.html" class="btn btn-warning azul_logo" target="contenido-marco">Acerca de nosotros</a>
-            <a href="pages/eventos.html" class="btn btn-warning azul_logo" target="contenido-marco">Eventos</a>
-            <a href="pages/ofertas.html" class="btn btn-warning azul_logo" target="contenido-marco">Ofertas</a>
-        </nav>
-
-        <div class="container fondo_div">
-            <iframe 
-                id="contenido-marco" 
-                name="contenido-marco" 
-                src="pages/nosotros.html" frameborder="0" 
-                style="width: 100%; height: 60vh; border: none; overflow-y: auto;">
-            </iframe>
-        </div>
-
+    <main class="flex-grow">
+        <iframe 
+            name="contenido"
+            src="Pages/Inicio.html"
+            class="w-full h-[calc(100vh-150px)] border-0">
+        </iframe>
     </main>
 
-    <footer class="footer bg-light borde_inferior">
-        <!-- Botones de contacto -->
-        <div class="container text-center contact-buttons">
-
-            <a href="mailto:@gmail.com"
-                target="_blank"
-                class="whatsapp-button-image">
-                    <img src="Images\Email.png" alt="Email" class="email-icon">
-            </a>
-            
-            <a href="https://wa.me/54"
-                target="_blank"
-                class="whatsapp-button-image">
-                    <img src="Images\WhatsApp.png" alt="WhatsApp" class="whatsapp-icon">
-            </a>
-        </div>
-
-        <p>&copy; 2025 ExpediciónCr. Todos los derechos reservados. </p>
+    <footer class="mt-auto bg-[#1c7d90] text-gray-800 text-center py-6">
+        <p class="font-semibold">© 2024 ExpediciónCr — Viví la aventura del agua</p>
     </footer>
-    
-
 
 </body>
 </html>
+
+
