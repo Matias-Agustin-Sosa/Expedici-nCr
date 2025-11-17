@@ -40,14 +40,22 @@
             <nav class="hidden peer-checked:flex absolute top-16 left-0 w-full 
                         bg-neutral-100 flex-col md:static md:flex md:flex-row md:bg-transparent md:w-auto">
 
-                <a href="Pages/Inicio.html" class="px-4 py-2 hover:scale-105 md:hover:bg-transparent">Inicio</a>
-                <a href="Pages/Eventos.html" class="px-4 py-2 hover:scale-105 md:hover:bg-transparent">Eventos</a>
-                <a href="Pages/Ofertas.html" class="px-4 py-2 hover:scale-105 md:hover:bg-transparent">Ofertas</a>
+                <a href="Pages/Inicio.html" class="px-4 py-2 hover:scale-105 md:hover:bg-transparent" target="contenido">Inicio</a>
+                <a href="Pages/Eventos.html" class="px-4 py-2 hover:scale-105 md:hover:bg-transparent" target="contenido">Eventos</a>
+                <a href="Pages/Ofertas.html" class="px-4 py-2 hover:scale-105 md:hover:bg-transparent" target="contenido">Ofertas</a>
 
             </nav>
 
         </div>
     </header>
+
+    <main class="flex-grow">
+        <iframe 
+            name="contenido"
+            src="Pages/Inicio.html"
+            class="w-full h-[calc(100vh-150px)] border-0">
+        </iframe>
+    </main>
 
     <footer class="mt-auto bg-[#1c7d90] text-gray-800 text-center py-6">
         <p class="font-semibold">© 2024 ExpediciónCr — Viví la aventura del agua</p>
