@@ -21,15 +21,28 @@
                 alt="Logo Secundario" 
                 class="h-12">
 
+            <!-- Botón hamburguesa (solo visible en móviles) -->
+            <label for="menu-toggle" class="cursor-pointer md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                     class="h-8 w-8" fill="none" 
+                     viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" 
+                          stroke-linejoin="round" 
+                          stroke-width="2" 
+                          d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </label>
 
+            <!-- Checkbox oculto que controla el menú -->
+            <input type="checkbox" id="menu-toggle" class="peer hidden">
 
             <!-- Navegación -->
             <nav class="hidden peer-checked:flex absolute top-16 left-0 w-full 
                         bg-neutral-100 flex-col md:static md:flex md:flex-row md:bg-transparent md:w-auto">
 
-                <a href="Pages/Inicio.html" class="px-4 py-2 hover:scale-105 md:hover:bg-transparent" target="contenido">Inicio</a>
-                <a href="Pages/Eventos.html" class="px-4 py-2 hover:scale-105 md:hover:bg-transparent" target="contenido">Eventos</a>
-                <a href="Pages/Ofertas.html" class="px-4 py-2 hover:scale-105 md:hover:bg-transparent" target="contenido">Ofertas</a>
+                <a href="Inicio.html" class="px-4 py-2 hover:scale-105 md:hover:bg-transparent" target="contenido">Inicio</a>
+                <a href="Eventos.html" class="px-4 py-2 hover:scale-105 md:hover:bg-transparent" target="contenido">Eventos</a>
+                <a href="Ofertas.html" class="px-4 py-2 hover:scale-105 md:hover:bg-transparent" target="contenido">Ofertas</a>
 
             </nav>
 
@@ -39,7 +52,7 @@
     <main class="flex-grow">
         <iframe 
             name="contenido"
-            src="Pages/Inicio.html"
+            src="Inicio.html"
             class="w-full h-[calc(100vh-150px)] border-0">
         </iframe>
     </main>
