@@ -13,7 +13,7 @@
 <body>
 
     <header class="py-4 px-4" style="background-color: #f6efe9;">
-        <div class="max-w-full flex justify-between items-center">
+        <div class="max-w-full flex justify-between items-center relative">
 
             <!-- Logo -->
             <img 
@@ -21,28 +21,79 @@
                 alt="Logo Secundario" 
                 class="h-12">
 
-            <!-- Botón hamburguesa (solo visible en móviles) -->
-            <label for="menu-toggle" class="cursor-pointer md:hidden">
+            <!-- Botón hamburguesa (solo en móvil) -->
+            <label for="menu-toggle" class="cursor-pointer md:hidden z-50">
                 <svg xmlns="http://www.w3.org/2000/svg" 
-                     class="h-8 w-8" fill="none" 
-                     viewBox="0 0 24 24" stroke="currentColor">
+                    class="h-8 w-8" fill="none" 
+                    viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" 
-                          stroke-linejoin="round" 
-                          stroke-width="2" 
-                          d="M4 6h16M4 12h16M4 18h16" />
+                        stroke-linejoin="round" 
+                        stroke-width="2" 
+                        d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </label>
 
-            <!-- Checkbox oculto que controla el menú -->
+            <!-- Controlador del menú -->
             <input type="checkbox" id="menu-toggle" class="peer hidden">
 
-            <!-- Navegación -->
-            <nav class="hidden peer-checked:flex absolute top-16 left-0 w-full 
-                        bg-neutral-100 flex-col md:static md:flex md:flex-row md:bg-transparent md:w-auto">
+            <!-- Overlay oscuro para cuando el menú está abierto -->
+            <div class="peer-checked:block hidden fixed inset-0 bg-black/40 z-40 md:hidden"></div>
 
-                <a href="Pages/Inicio.html" class="px-4 py-2 hover:scale-105 md:hover:bg-transparent" target="contenido">Inicio</a>
-                <a href="Pages/Eventos.html" class="px-4 py-2 hover:scale-105 md:hover:bg-transparent" target="contenido">Eventos</a>
-                <a href="Pages/Ofertas.html" class="px-4 py-2 hover:scale-105 md:hover:bg-transparent" target="contenido">Ofertas</a>
+            <!-- Sidebar en versión móvil, menú normal en desktop -->
+            <nav class="
+                fixed top-0 left-0 h-full w-64 bg-neutral-100 shadow-lg 
+                -translate-x-full peer-checked:translate-x-0 transition-transform duration-300 
+                flex flex-col pt-0 md:pt-0 gap-4 z-50
+
+                md:static md:h-auto md:w-auto md:flex md:flex-row md:translate-x-0 md:shadow-none md:bg-transparent md:pt-0
+            ">
+
+                <!-- Imagen arriba del menú (solo móvil) -->
+                <div class="flex justify-center mb-4 md:hidden">
+                    <img src="Images/Logo Empresa.png" class="h-20">
+                </div>
+
+                <a href="Pages/Inicio.html" 
+                    class="px-6 py-2 hover:bg-neutral-200 md:hover:bg-transparent flex items-center gap-3"
+                    target="contenido">
+
+                    <!-- Icono (casa) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" 
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 9.75L12 4l9 5.75V20a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1V9.75z" />
+                    </svg>
+
+                    Inicio
+                </a>
+
+                <a href="Pages/Eventos.html" 
+                    class="px-6 py-2 hover:bg-neutral-200 md:hover:bg-transparent flex items-center gap-3"
+                    target="contenido">
+
+                    <!-- Icono (estrella) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" 
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.518 4.674a1 1 0 00.95.69h4.91c.969 0 1.371 1.24.588 1.81l-3.97 2.88a1 1 0 00-.364 1.118l1.517 4.674c.3.922-.755 1.688-1.538 1.118l-3.97-2.88a1 1 0 00-1.176 0l-3.97 2.88c-.783.57-1.838-.196-1.539-1.118l1.518-4.674a1 1 0 00-.364-1.118l-3.97-2.88c-.783-.57-.38-1.81.588-1.81h4.91a1 1 0 00.95-.69l1.518-4.674z" />
+                    </svg>
+
+                    Eventos
+                </a>
+                
+                <a href="Pages/Ofertas.html" 
+                    class="px-6 py-2 hover:bg-neutral-200 md:hover:bg-transparent flex items-center gap-3"
+                    target="contenido">
+
+                    <!-- Icono (etiqueta) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" 
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M7 7h.01M3 11l4-4 8 8-4 4-8-8zM13 5l6 6-4 4-6-6 4-4z" />
+                    </svg>
+
+                    Ofertas
+                </a>
 
             </nav>
 
