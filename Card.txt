@@ -1,0 +1,26 @@
+	<div class="max-w-sm mx-auto bg-white rounded-2xl hover:shadow-xl hover:scale-[1.02] shadow-lg overflow-hidden">
+                
+                <!-- Galería de imágenes -->
+                <div class="flex overflow-x-auto snap-x snap-mandatory">
+                    <img src="../Images/Kayak/kayak3.jpg"
+                        class="w-full h-48 object-cover snap-center flex-shrink-0" alt="foto1">
+
+                    <img src="../Images/Kayak/Kayak2.jpg"
+                        class="w-full h-48 object-cover snap-center flex-shrink-0" alt="foto2">
+
+                    <img src="../Images/Kayak/Kayak1.jpg"
+                        class="w-full h-48 object-cover snap-center flex-shrink-0" alt="foto3">
+                </div>
+
+                <div class="p-6">
+                    <h2 class="text-2xl font-semibold text-gray-800">Kayak</h2>
+                    <p class="text-gray-600 mt-2">
+                        Kayak K1 Atlantikayaks + Remo + Silbato
+                    </p>
+
+                    <button class="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 rounded-xl transition">
+                        Ver más
+                    </button>
+                </div>
+            
+            </div>  
