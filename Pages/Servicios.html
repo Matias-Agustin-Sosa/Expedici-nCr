@@ -8,43 +8,64 @@
 
 <body class="min-h-screen flex flex-col">
 
-    <div class="fixed inset-0 bg-[url('../Images/Imagenfondo3.jpg')] flex-1 bg-cover bg-center brightness-50"></div>
+    <div class="relative">
+        <!-- Imagen de fondo -->
+        <div class="absolute inset-0 bg-[url('../Images/EVENTOS.png')] bg-center bg-no-repeat bg-cover brightness-50"></div>
+
+        <!-- Contenido -->
+        <div class="relative z-10 p-6">
+            <h1 class="text-4xl font-serif text-center text-white m-4">
+                Alquiler de Kayak
+            </h1>  
+        </div>
+    </div>
+    
     <!--position absolute -->
     <div class="z-10 p-4">
 
-        <div class="bg-[#ffffff] rounded-lg px-2 py-2">
-            <h1 class="px-4 py-2 rounded-lg text-3xl font-serif text-center text-[#1d869b] m-4">
+        <div class="bg-[#f4f0e5] rounded-lg px-2 py-2">
+            <h1 class="px-4 py-2 rounded-lg text-3xl text-center text-[#1d869b] m-4">
                 Alquiler de Kayak
             </h1>
         
         
-            <p class="text-1xl font-serif text-black m-2">
-                ExpediciónCR te invita a vivir una experiencia inolvidable con el alquiler de kayaks en la hermosa bahía de Comodoro Rivadavia. Tanto si eres un palista experimentado como si buscas una actividad recreativa segura para toda la familia, tenemos el equipo y el servicio perfecto para tu próxima aventura marítima.<br>
+            <p class="text-1xl text-black m-6">
+                ExpediciónCR te invita a vivir una experiencia inolvidable con el alquiler de kayaks en la hermosa bahía de Comodoro 
+                Rivadavia. Tanto si eres un palista experimentado como si buscas una actividad recreativa segura para toda la familia, 
+                tenemos el equipo y el servicio perfecto para tu próxima aventura marítima.<br><br>
 
-                ✨ Lo que Ofrecemos:<br>
+                <span class="font-bold">Lo que Ofrecemos:</span><br><br>
 
-                Equipo de Alta Calidad: Kayaks estables, cómodos y de última generación, ideales para las aguas patagónicas.<br>
+                <span class="font-bold">Equipo de Alta Calidad:</span> Kayaks estables, cómodos y de última generación, ideales para 
+                las aguas patagónicas.<br>
 
-                Seguridad Garantizada: Incluimos todo el equipo de seguridad necesario (chalecos salvavidas, remos, y briefing inicial) para que disfrutes con total tranquilidad.<br>
+                <span class="font-bold">Seguridad Garantizada:</span> Incluimos todo el equipo de seguridad necesario 
+                (chalecos salvavidas, remos, y briefing inicial) para que disfrutes con total tranquilidad.<br>
 
-                Flexibilidad: Elige la duración de tu alquiler (por horas o jornada completa) para que se adapte perfectamente a tu itinerario.<br>
+                <span class="font-bold">Flexibilidad:</span> Elige la duración de tu alquiler (por horas o jornada completa) para que se adapte perfectamente a 
+                tu itinerario.<br>
 
-                Asesoramiento Local: Nuestro equipo te brindará consejos sobre las mejores zonas de navegación en la costa de Comodoro, dependiendo de las condiciones del viento y la marea.<br>
+                <span class="font-bold">Asesoramiento Local:</span> Nuestro equipo te brindará consejos sobre las mejores zonas 
+                de navegación en la costa de Comodoro, dependiendo de las condiciones del viento y la marea.<br>
 
-                Imagina esto: Deslizarte silenciosamente sobre las olas, observar la fauna marina local (¡quizás algún lobo marino o aves costeras!), y disfrutar de los imponentes paisajes de la Patagonia. Una actividad perfecta para desconectar, hacer ejercicio y crear recuerdos únicos.
+                <span class="font-bold">Imagina esto:</span> Deslizarte silenciosamente sobre las olas, observar la fauna marina local 
+                (¡quizás algún lobo marino o aves costeras!), y disfrutar de los imponentes paisajes de la Patagonia. 
+                Una actividad perfecta para desconectar, hacer ejercicio y crear recuerdos únicos.
             </p>
+
+            <img src="../Images/Alquiler.jpg" class="rounded-lg m-6 block mx-auto h-auto md:w-1/2 h-auto block md:mx-auto">
         </div>
 
-        <div class="bg-[#ffffff] rounded-lg px-2 py-2 mt-2">
-            <h1 class="px-4 py-2 rounded-lg text-3xl font-serif text-center text-[#1d869b] m-4">
+        <div class="bg-[#f4f0e5] rounded-lg px-2 py-2 mt-2">
+            <h1 class="px-4 py-2 rounded-lg text-3xl text-center text-[#1d869b] m-4">
                 Excursiones distintos niveles
             </h1>
             
         
 
-            <p class="text-2xl font-serif text-center m-3">🌊 Susurro Costero (Nivel Fácil)</p>
+            <p class="text-2xl text-center m-3">🌊 Susurro Costero (Nivel Fácil)</p>
 
-            <p class="text-1xl font-serif text-black m-2">
+            <p class="text-1xl text-black m-2">
 
                 Descripción: La introducción perfecta a la belleza del Golfo San Jorge. Una navegación tranquila y relajada, ideal para 
                 toda la familia y quienes se inician en la aventura marítima.
@@ -57,9 +78,9 @@
                 Ideal para: Principiantes, familias con niños, fotógrafos.
             </p>
 
-            <p class="text-2xl font-serif text-center m-3">⚓ Travesía Pingüinera (Nivel Medio)</p>
+            <p class="text-2xl text-center m-3">⚓ Travesía Pingüinera (Nivel Medio)</p>
 
-            <p class="text-1xl font-serif text-black m-2">
+            <p class="text-1xl text-black m-2">
                 Descripción: Sube la apuesta con una navegación un poco más extensa que te lleva a explorar áreas de mayor interés 
                 faunístico. Sentirás la inmensidad del mar Patagónico. Se requiere estar en condiciones físicas básicas para disfrutar 
                 de la duración del viaje.
@@ -72,9 +93,9 @@
                 Ideal para: Amantes de la naturaleza, parejas, grupos de amigos con curiosidad por la vida marina.
             </p>
 
-            <p class="text-2xl font-serif text-center m-3">🌪️ Ruta del Viento Austral (Nivel Difícil)</p>
+            <p class="text-2xl text-center m-3">🌪️ Ruta del Viento Austral (Nivel Difícil)</p>
 
-            <p class="text-1xl font-serif text-black m-2">
+            <p class="text-1xl text-black m-2">
                 Descripción: Una verdadera aventura que se adentra en zonas más abiertas y expuestas al oleaje y a las condiciones 
                 climáticas cambiantes de la Patagonia. La navegación es más dinámica y requiere una buena resistencia física y mental.
                 <br>
@@ -86,9 +107,9 @@
                 Ideal para: Buscadores de emociones, marineros aficionados, grupos deportivos y de team-building.
             </p>
 
-            <p class="text-2xl font-serif text-center m-3">🔱 Horizonte Silvestre (Nivel Experto)</p>
+            <p class="text-2xl text-center m-3">🔱 Horizonte Silvestre (Nivel Experto)</p>
 
-            <p class="text-1xl font-serif text-black m-2">
+            <p class="text-1xl text-black m-2">
                 Descripción: No es solo una excursión, es una expedición de élite. Esta opción de varios días te lleva a los confines de la 
                 región costera, donde la mano del hombre es casi inexistente. Se requiere experiencia previa en navegación, 
                 tolerancia a las inclemencias y un espíritu verdaderamente aventurero.
@@ -103,14 +124,14 @@
 
         </div>
 
-        <div class="bg-[#ffffff] rounded-lg px-2 py-2 mt-2">
-            <h1 class="px-4 py-2 rounded-lg text-3xl font-serif text-center text-[#1d869b] m-4">
+        <div class="bg-[#f4f0e5] rounded-lg px-2 py-2 mt-2">
+            <h1 class="px-4 py-2 rounded-lg text-3xl text-center text-[#1d869b] m-4">
                 Escuela de Kayak
             </h1>
         </div>
 
-        <div class="bg-[#ffffff] rounded-lg px-2 py-2 mt-2">
-            <h1 class="px-4 py-2 rounded-lg text-3xl font-serif text-center text-[#1d869b] m-4">
+        <div class="bg-[#f4f0e5] rounded-lg px-2 py-2 mt-2">
+            <h1 class="px-4 py-2 rounded-lg text-3xl text-center text-[#1d869b] m-4">
                 Travesías en Kayak
             </h1>
         </div>
